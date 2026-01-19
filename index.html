@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>線上神明抽籤</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  background:#111;
+  color:#fff;
+  font-family:"Noto Sans TC",Arial;
+  text-align:center;
+  padding:40px;
+}
+.box{
+  max-width:480px;
+  margin:auto;
+  background:#1e1e1e;
+  padding:30px;
+  border-radius:16px;
+}
+button{
+  padding:15px 30px;
+  font-size:18px;
+  border:none;
+  border-radius:10px;
+  background:#c62828;
+  color:#fff;
+  cursor:pointer;
+}
+button:hover{opacity:.85}
+.lot{
+  font-size:26px;
+  margin-top:20px;
+}
+small{color:#aaa}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h1>🙏 線上神明抽籤</h1>
+  <p>請靜心、誠心提問後再抽籤</p>
+
+  <button onclick="draw()">開始抽籤</button>
+
+  <div id="result" class="lot"></div>
+  <small>※ 線上籤詩僅供參考</small>
+</div>
+
+<script>
+const lots = [
+"第一籤：萬事皆吉，福至心靈。",
+"第二籤：雲開見月，前途光明。",
+"第三籤：先難後易，耐心必成。",
+"第四籤：貴人相助，轉機在即。",
+"第五籤：守正不移，自有好運。",
+"第六籤：時機未到，宜靜不宜動。",
+"第七籤：順其自然，水到渠成。",
+"第八籤：心誠則靈，福報漸近。",
+"第九籤：退一步想，海闊天空。",
+"第十籤：否極泰來，轉運將至。"
+];
+
+function draw(){
+  const n = Math.floor(Math.random()*lots.length);
+  document.getElementById("result").innerHTML =
+    "🎋<br>" + lots[n];
+}
+</script>
+
+</body>
+</html>
