@@ -41,6 +41,18 @@ button:hover{opacity:.85}
   margin-top:20px;
 }
 small{color:#aaa}
+
+  //第一籤&內容字體大小調整
+  .lot-title{
+  display:block;
+  font-size:32px;   /* 第一籤字體大小 */
+  font-weight:700;
+  margin-bottom:10px;
+}
+.lot-text{
+  font-size:22px;
+  line-height:1.8;
+}
 </style>
 </head>
 <body>
@@ -57,22 +69,54 @@ small{color:#aaa}
 
 <script>
 const lots = [
-"第一籤：\n萬事皆吉，福至心靈。",
-"第二籤：\n雲開見月，前途光明。",
-"第三籤：\n先難後易，耐心必成。",
-"第四籤：\n貴人相助，轉機在即。",
-"第五籤：\n守正不移，自有好運。",
-"第六籤：\n時機未到，宜靜不宜動。",
-"第七籤：\n順其自然，水到渠成。",
-"第八籤：\n心誠則靈，福報漸近。",
-"第九籤：\n退一步想，海闊天空。",
-"第十籤：\n否極泰來，轉運將至。"
+{
+  title: "第一籤",
+  text: "萬事皆吉，福至心靈。"
+},
+{
+  title: "第二籤",
+  text: "雲開見月，前途光明。"
+},
+{
+  title: "第三籤",
+  text: "先難後易，耐心必成。"
+},
+{
+  title: "第四籤",
+  text: "貴人相助，轉機在即。"
+},
+{
+  title: "第五籤",
+  text: "守正不移，自有好運。"
+},
+{
+  title: "第六籤",
+  text: "時機未到，宜靜不宜動。"
+},
+{
+  title: "第七籤",
+  text: "順其自然，水到渠成。"
+},
+{
+  title: "第八籤",
+  text: "心誠則靈，福報漸近。"
+},
+{
+  title: "第九籤",
+  text: "退一步想，海闊天空。"
+},
+{
+  title: "第十籤",
+  text: "否極泰來，轉運將至。"
+}
 ];
 
 function draw(){
   const n = Math.floor(Math.random()*lots.length);
   document.getElementById("result").innerHTML =
-    "🧧<br>" + lots[n];
+  "🧧<br>" +
+  "<span class='lot-title'>" + lots[n].title + "</span>" +
+  "<span class='lot-text'>" + lots[n].text + "</span>";
 }
 </script>
 
