@@ -49,7 +49,11 @@ small{color:#aaa}
   font-weight:700;
   margin-bottom:10px;
 }
-.lot-text{
+.lot-text1{
+  font-size:22px;
+  line-height:1.2;
+}
+.lot-text2{
   font-size:22px;
   line-height:1.2;
 }
@@ -71,43 +75,43 @@ small{color:#aaa}
 const lots = [
 {
   title: "💜信任💜<br><br>",
-  text: "信任內我的指引:",
-  text:"內我會以我可以接受的方式來給我訊息。"
+  text1: "信任內我的指引:",
+  text2:"內我會以我可以接受的方式來給我訊息。"
 },
 {
   title: "💜連結💜<br><br>",
-  text: "與指導靈連結:",
-  text: "以自動書寫試著連結高我或與指導靈對話。"
+  text1: "與指導靈連結:",
+  text2: "以自動書寫試著連結高我或與指導靈對話。"
 },
 {
   title: "💜擴展💜<br><br>",
-  text: "天線的敞開:",
-  text: "我願意對宇宙中所有的發生保持開放與探索。"
+  text1: "天線的敞開:",
+  text2: "我願意對宇宙中所有的發生保持開放與探索。"
 },
 {
   title: "💜超越💜<br><br>",
-  text: "保持覺知:",
-  text: "以更高的眼光，觀照自己的起心動念。"
+  text1: "保持覺知:",
+  text2: "以更高的眼光，觀照自己的起心動念。"
 },
 {
   title: "💜精神層次💜<br><br>",
-  text: "追求精神的滿足:",
-  text: "我會以電影、書、音樂，來滿足精神所需。"
+  text1: "追求精神的滿足:",
+  text2: "我會以電影、書、音樂，來滿足精神所需。"
 },
 {
   title: "💜知曉💜<br><br>",
-  text: "理解精神層次:",
-  text: "我能理解神祕學、心理學、潛意識的資訊與學習。"
+  text1: "理解精神層次:",
+  text2: "我能理解神祕學、心理學、潛意識的資訊與學習。"
 },
 {
   title: "💜靜心💜<br><br>",
-  text: "讓自己安靜下來:",
-  text: "靜心、散步、瑜珈，每天花些時間與自己獨處。"
+  text1: "讓自己安靜下來:",
+  text2: "靜心、散步、瑜珈，每天花些時間與自己獨處。"
 },
 {
   title: "💜接收💜<br><br>",
-  text: "接收更高智慧:",
-  text: "我能接收宇宙的靈性智慧。"
+  text1: "接收更高智慧:",
+  text2: "我能接收宇宙的靈性智慧。"
 }
 ];
 
@@ -116,7 +120,8 @@ function draw(){
   document.getElementById("result").innerHTML =
   "<br>" +
  "<span class='lot-title'>" + lots[n].title + "</span>" +
-  "<span class='lot-text'>" + lots[n].text + "</span>";
+ "<span class='lot-text1'>" + lots[n].text1 + "</span>" +
+ "<span class='lot-text2'>" + lots[n].text2 + "</span>";
 }
 </script>
 
